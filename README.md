@@ -1,2 +1,2 @@
-# Microprocessor-Design
-Team Repository for Microprocessor design (Brigid Kelly, Don Dang)
+# Labs
+Seattle University ECEGR 2220 Labs - Spring 2018
