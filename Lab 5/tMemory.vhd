@@ -1,3 +1,20 @@
+
+
+-- Developer : Don Dang, Brigid Kelly
+-- Project   : Lab 5
+-- Filename  : Memory.vhd
+-- Date      : 5/14/18
+-- Class     : Microprocessor Designs
+-- Instructor: Ken Rabold
+-- Purpose   : 
+--             Design and implement a Memory and Register Bank
+--
+-- Notes     : 
+-- This excercise is developed using Questa Sim 
+			
+-- Developer	Date		Activities
+-- BK		5/2018		Added read/write register test data
+
 --------------------------------------------------------------------------------
 --
 -- Test Bench for LAB #5 - Memory and Register Bank
@@ -189,80 +206,81 @@ BEGIN
 		clock <= '0';
 		wait for 5 ns;
 
+--5/20/18: Bri added test data
 		-- Register Bank tests
 		dataIn   <= X"11111111";
-		writeReg <= "01010";
+		writeReg <= "00001";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		dataIn   <= X"22222222";
-		writeReg <= "01011";
+		writeReg <= "00010";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		dataIn   <= X"33333333";
-		writeReg <= "01100";
+		writeReg <= "00011";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		dataIn   <= X"44444444";
-		writeReg <= "01101";
+		writeReg <= "00100";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		dataIn   <= X"55555555";
-		writeReg <= "01110";
+		writeReg <= "00101";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		dataIn   <= X"66666666";
-		writeReg <= "01111";
+		writeReg <= "00110";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		dataIn   <= X"77777777";
-		writeReg <= "10000";
+		writeReg <= "00111";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		dataIn   <= X"88888888";
-		writeReg <= "10001";
+		writeReg <= "01000";
 		writeCmd <= '1';
 		wait for 5 ns;	
 		writeCmd <= '0';
 		wait for 5 ns;	
 
 		readReg1 <= "00000";
-		readReg2 <= "01010";
+		readReg2 <= "00001";
 		wait for 10 ns;	
 
-		readReg1 <= "01011";
-		readReg2 <= "01100";
+		readReg1 <= "00010";
+		readReg2 <= "00100";
 		wait for 10 ns;	
 
-		readReg1 <= "01101";
-		readReg2 <= "01110";
+		readReg1 <= "00011";
+		readReg2 <= "00100";
 		wait for 10 ns;	
 
-		readReg1 <= "01111";
-		readReg2 <= "10000";
+		readReg1 <= "00101";
+		readReg2 <= "01000";
 		wait for 10 ns;	
 
-		readReg1 <= "10001";
+		readReg1 <= "00111";
 		readReg2 <= "00000";
 		wait for 10 ns;	
 
