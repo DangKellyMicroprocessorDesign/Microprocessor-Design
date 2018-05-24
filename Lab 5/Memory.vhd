@@ -16,6 +16,7 @@
 -- DD		5/14/18 	Download and modify Memory.vhd
 -- BK           5/14/18         Completed writing code
 -- BK           5/18/18         Full compile of components
+--BK            5/23/18         Full test complete, final upload
 
 
 
@@ -84,7 +85,7 @@ end staticRAM;
 
 ---------------------------------------------------------------------
 ------- START OF REGISTER BANK ENTITY
---------------------------------------------------------------------------------
+---------------------------------------------------------------------
 LIBRARY ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
@@ -137,7 +138,7 @@ architecture remember of Registers is
 	begin
 	
 	---DEMUX FOR CHOOSING REGISTER TO WRITE---
-	zeri <= zer      when WriteCmd&writereg="100000";
+	zeri <= zer;      --when WriteCmd&writereg="100000";
 	a0i <= writeData when WriteCmd&writereg="100001";
 	a1i <= writeData when WriteCmd&writereg="100010";
 	a2i <= writeData when WriteCmd&writereg="100011";

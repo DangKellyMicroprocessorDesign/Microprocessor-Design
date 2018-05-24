@@ -103,9 +103,10 @@ BEGIN
 		wait for 5 ns;
 		reset <= '0';
 		wait for 5 ns;
-
 		oe  <= '0';
-
+		
+		--Set dataIn = X"11111111
+		--    address = X"00000000
 		address <= X"00000000";
 		dataIn  <= X"11111111";
 		we      <= '1';
@@ -114,6 +115,8 @@ BEGIN
 		clock <= '0';
 		wait for 5 ns;
 		
+		-- Set dataIn = X"22222222
+		--     address = x"00000004
 		address <= X"00000004";
 		dataIn  <= X"22222222";
 		we      <= '1';
@@ -154,7 +157,8 @@ BEGIN
 		clock <= '0';
 		wait for 5 ns;
 
-		-- Read back content
+		
+--Reading data from memory
 		oe      <= '0';
 		we      <= '0';
 
@@ -208,6 +212,7 @@ BEGIN
 
 --5/20/18: Bri added test data
 		-- Register Bank tests
+--Writing to the registers at at specific address
 		dataIn   <= X"11111111";
 		writeReg <= "00001";
 		writeCmd <= '1';
