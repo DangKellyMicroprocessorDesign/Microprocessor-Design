@@ -92,6 +92,7 @@ PCCount: process(Clock, Reset, PCin) IS -- Process takes these inputs to use
 BEGIN
 lastcount <= PCin;  
     
+
     IF rising_edge(clock) THEN
 	nextcount <= PCin;  --On rising edge next gets PC+4
               

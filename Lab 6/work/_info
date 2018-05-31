@@ -1,0 +1,272 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dP:/WEB/Spring 2018/Microprocessor Designs/GitHub/Labs/Labs/Lab 5
+Ebusmux2to1
+Z0 w1527730497
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dP:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6
+Z6 8P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/ProcElements.vhd
+Z7 FP:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/ProcElements.vhd
+l0
+L25
+Vdk>YJI;OUdCmHL^3mNcMW2
+!s100 C9j6il0f4dHVd0n_@3a=13
+Z8 OL;C;10.5e;63
+32
+Z9 !s110 1527731659
+!i10b 1
+Z10 !s108 1527731659.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/ProcElements.vhd|
+Z12 !s107 P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/ProcElements.vhd|
+!i113 0
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Aselection
+R1
+R2
+R3
+R4
+DEx4 work 10 busmux2to1 0 22 dk>YJI;OUdCmHL^3mNcMW2
+l33
+L31
+VI@KnFnJgg1[:^65oI;`=Q3
+!s100 17W[7mMfRnmn=HG_WHnko0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Econtrol
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+l0
+L46
+V>miNUmWgmclcEYj5n4aez3
+!s100 znQS92dXzZlM2a7K8D8?=1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Aboss
+R1
+R2
+R3
+R4
+DEx4 work 7 control 0 22 >miNUmWgmclcEYj5n4aez3
+l62
+L61
+VQ_L6LP=lndRhZD`?4EZ<@1
+!s100 Ll;5:g[Pf3IAYj<O0O]W[0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Einstructionram
+Z15 w1527725719
+R2
+R1
+Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R5
+Z17 8P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/InstrMemory.vhd
+Z18 FP:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/InstrMemory.vhd
+l0
+L11
+V66Om^UA6FP5;hL9MV1ok`0
+!s100 X;oSEnc^]dZ`]B<Sbo?Bb0
+R8
+32
+Z19 !s110 1527731658
+!i10b 1
+Z20 !s108 1527731658.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/InstrMemory.vhd|
+Z22 !s107 P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/InstrMemory.vhd|
+!i113 0
+R13
+R14
+Ainstrucram
+R2
+R1
+R16
+R3
+R4
+DEx4 work 14 instructionram 0 22 66Om^UA6FP5;hL9MV1ok`0
+l24
+L18
+VQ>3WHikkm6j[aAVO_Xf;c3
+!s100 k19_^o4YCnGDe;OdWnHVl0
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R13
+R14
+Eprocessor
+Z23 w1527728615
+R1
+R2
+R3
+R4
+R5
+Z24 8P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/Processor.vhd
+Z25 FP:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/Processor.vhd
+l0
+L25
+Vz2dd]TYF_9F<NP7HjQL503
+!s100 <@oJX[al[dUP3iBE7LWI01
+R8
+32
+R9
+!i10b 1
+R10
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/Processor.vhd|
+Z27 !s107 P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/Processor.vhd|
+!i113 0
+R13
+R14
+Aholistic
+R1
+R2
+R3
+R4
+Z28 DEx4 work 9 processor 0 22 z2dd]TYF_9F<NP7HjQL503
+l102
+L30
+Z29 Vda>FKd66XNkWbMV?eJ_0b3
+Z30 !s100 OOoA31E4b;ci30MB3im5A3
+R8
+32
+R9
+!i10b 1
+R10
+R26
+R27
+!i113 0
+R13
+R14
+Eprogramcounter
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+l0
+L75
+V>fPbnRhBTk[X5eb?VJR@X3
+!s100 hZ`:zHVc8go7a^mQIP4Uz1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Aexecutive
+R1
+R2
+R3
+R4
+DEx4 work 14 programcounter 0 22 >fPbnRhBTk[X5eb?VJR@X3
+l88
+L82
+VAhG?cedzUS^eL9`Wnm^TN3
+!s100 `6G:ZmaF5>04bAH:Q7CXW1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Etprocessor_vhd
+Z31 w1527728778
+R16
+R2
+R1
+R3
+R4
+R5
+Z32 8P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/tProcessor.vhd
+Z33 FP:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/tProcessor.vhd
+l0
+L25
+VePiF^3U6:MIWQj>I8c@A61
+!s100 i7z5`nMQO`56<RcIFi?j70
+R8
+32
+R19
+!i10b 1
+R20
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/tProcessor.vhd|
+Z35 !s107 P:/WEB/Spring 2018/Microprocessor Designs/GitHub/Team/Microprocessor-Design/Lab 6/tProcessor.vhd|
+!i113 0
+R13
+R14
+Abehavior
+R16
+R2
+R1
+R3
+R4
+DEx4 work 14 tprocessor_vhd 0 22 ePiF^3U6:MIWQj>I8c@A61
+l40
+L28
+V@cW6l@bmPjbmmO5A8K?Tz1
+!s100 eC^N5ZE9FMb4OTlnN7^i=2
+R8
+32
+R19
+!i10b 1
+R20
+R34
+R35
+!i113 0
+R13
+R14

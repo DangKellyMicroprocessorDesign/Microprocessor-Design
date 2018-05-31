@@ -2,7 +2,7 @@
 -- Developer  : Don Dang, Brigid Kelly
 -- Project    : Lab 6
 -- ProjectName: Single Cycle Processor
--- Filename   : Processor.vhd
+-- Filename   : Memory.vhd
 -- Date       : 5/30/18
 -- Class      : Microprocessor Designs
 -- Instructor : Ken Rabold
@@ -11,7 +11,7 @@
 --
 -- Notes      : 
 -- This excercise is developed using Questa Sim 
--- The starting files for this project is Processor.vhd and ProcElements.vhd
+--
 			
 -- Developer	Date		Activities
 -- DD		5/30/18 	Download lab 6 from Team DangKelly from Github
