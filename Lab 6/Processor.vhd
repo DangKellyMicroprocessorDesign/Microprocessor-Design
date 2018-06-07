@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Processor is
     Port ( reset : in  std_logic;
-	   clock : in  std_logic);
+	       clock : in  std_logic);
 end Processor;
 
 architecture holistic of Processor is
@@ -109,5 +109,25 @@ architecture holistic of Processor is
 
 begin
 	-- Add your code here
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 end holistic;
 

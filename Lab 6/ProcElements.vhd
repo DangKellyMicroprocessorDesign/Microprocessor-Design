@@ -138,10 +138,34 @@ begin
 					 
 END SignExtender;
 
-
-
+  
+  ---------------------------------------------------------
   
   
+  
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.A
+
+entity branchlogic is
+	PORT( ctrlinput : std_logic_vector (1 downto 0);
+	      zeroIn : std_logic;
+		  output : std_logic);
+		  
+end branchlogic;
+
+architecture brancher of branchlogic is
+
+begin
+with ctrlinput & zeroIn select
+			output <= '0' when '111' or '010', 
+			          '1' when '110' or '011',
+					  '0' when others;
+					  
+end ctrlinput;
+
+
 
 
 
