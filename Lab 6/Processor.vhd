@@ -89,7 +89,7 @@ architecture holistic of Processor is
 		 Clock: in std_logic;
 		 PCin: in std_logic_vector(31 downto 0);
 		 PCout: out std_logic_vector(31 downto 0));
-	end component;
+	end component ProgramCounter;
 
 	component adder_subtracter
 		port(	datain_a: in std_logic_vector(31 downto 0);
@@ -98,6 +98,14 @@ architecture holistic of Processor is
 			dataout: out std_logic_vector(31 downto 0);
 			co: out std_logic);
 	end component adder_subtracter;
+	
+	component ImmGen
+		Port(instype : in std_logic_vector(1 downto 0);
+			immgen_in : in std_logic_vector(31 downto 0);
+			immgen_out : out std_logic_logic_vector(31 downto 0) );
+		end component Immgen;
+			
+			
 
 begin
 	-- Add your code here

@@ -32,8 +32,8 @@ architecture selection of BusMux2to1 is
 SIGNAL highz: STD_LOGIC_VECTOR(31 DOWNTO 0) := "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
 begin
           WITH selector SELECT
-		Result <= In0 when '0',
-			  In1 when '1',
+		      Result <= In0 when '0',
+			            In1 when '1',
                         highz when others;
 end architecture selection;
 
@@ -63,7 +63,6 @@ begin
 -- Add your code here
 
 end Boss;
-
 
 
 --------------------------------------------------------------------------------
@@ -108,3 +107,53 @@ END PROCESS;
 end executive;
 
 --------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.A
+
+entity ImmGen is 
+	Port(   instype : in std_logic_vector(1 downto 0);
+		    immgen_in : in std_logic_vector(31 downto 0);
+	        immgen_out : out std_logic_logic_vector(31 downto 0) );
+end ImmGen;
+
+architecture SignExtender of Immgen is
+
+SIGNAL immediate : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+
+begin
+
+  with instype select
+	   immediate <=                      immgen_in(31) & "00000000000000000000" & immgen_in(30 downto 20)  when '00',  --I-TYPE
+			                       "00000000000000000000" & immgen_in(31 downto 25) & immgen(11 downto 7)  when '01' , --S-TYPE
+  "0000000000000000000" & immgen_in(31) & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8)  when '10',  -- B-TYPE
+                                                                 immgen_in(31 downto 12) & "000000000000"  when others;-- U-TYPE
+																
+  immgen_out <= immediate;
+					                                                                                                 
+					 
+END SignExtender;
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
