@@ -128,10 +128,11 @@ SIGNAL immediate : STD_LOGIC_VECTOR(31 DOWNTO 0);
 begin
 
   with instype select
-	   immediate <=                      immgen_in(31) & "00000000000000000000" & immgen_in(30 downto 20)  when '00',  --I-TYPE
-			                       "00000000000000000000" & immgen_in(31 downto 25) & immgen(11 downto 7)  when '01' , --S-TYPE
-  "0000000000000000000" & immgen_in(31) & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8)  when '10',  -- B-TYPE
-                                                                 immgen_in(31 downto 12) & "000000000000"  when others;-- U-TYPE
+	      immediate <=   
+		                  		     		immgen_in(31) & "00000000000000000000" & immgen_in(30 downto 20)  when '00',  --I-TYPE
+			                          "00000000000000000000" & immgen_in(31 downto 25) & immgen(11 downto 7)  when '01' , --S-TYPE
+"0000000000000000000" & immgen_in(31) & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8)& "0"  when '10',  -- B-TYPE
+                                                                    immgen_in(31 downto 12) & "000000000000"  when others;-- U-TYPE
 																
   immgen_out <= immediate;
 					                                                                                                 
