@@ -2,7 +2,7 @@
 -- Developer  : Don Dang, Brigid Kelly
 -- Project    : Lab 6
 -- ProjectName: Single Cycle Processor
--- Filename   : Memory.vhd
+-- Filename   : Processor.vhd
 -- Date       : 5/30/18
 -- Class      : Microprocessor Designs
 -- Instructor : Ken Rabold
@@ -11,7 +11,7 @@
 --
 -- Notes      : 
 -- This excercise is developed using Questa Sim 
---
+-- The starting files for this project is Processor.vhd and ProcElements.vhd
 			
 -- Developer	Date		Activities
 -- DD		5/30/18 	Download lab 6 from Team DangKelly from Github
@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity Processor is
     Port ( reset : in  std_logic;
-	   clock : in  std_logic);
+	       clock : in  std_logic);
 end Processor;
 
 architecture holistic of Processor is
@@ -89,7 +89,7 @@ architecture holistic of Processor is
 		 Clock: in std_logic;
 		 PCin: in std_logic_vector(31 downto 0);
 		 PCout: out std_logic_vector(31 downto 0));
-	end component;
+	end component ProgramCounter;
 
 	component adder_subtracter
 		port(	datain_a: in std_logic_vector(31 downto 0);
@@ -98,8 +98,36 @@ architecture holistic of Processor is
 			dataout: out std_logic_vector(31 downto 0);
 			co: out std_logic);
 	end component adder_subtracter;
+	
+	component ImmGen
+		Port(instype : in std_logic_vector(1 downto 0);
+			immgen_in : in std_logic_vector(31 downto 0);
+			immgen_out : out std_logic_logic_vector(31 downto 0) );
+		end component Immgen;
+			
+			
 
 begin
 	-- Add your code here
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 end holistic;
 

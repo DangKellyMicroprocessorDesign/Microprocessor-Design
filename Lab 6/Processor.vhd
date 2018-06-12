@@ -102,7 +102,7 @@ architecture holistic of Processor is
 	component ImmGen
 		Port(instype : in std_logic_vector(1 downto 0);
 			immgen_in : in std_logic_vector(31 downto 0);
-			immgen_out : out std_logic_logic_vector(31 downto 0) );
+			immgen_out : out std_logic_vector(31 downto 0) );
 		end component Immgen;
 			
 			

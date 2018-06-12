@@ -112,12 +112,12 @@ end executive;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.A
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity ImmGen is 
 	Port(   instype : in std_logic_vector(1 downto 0);
 		    immgen_in : in std_logic_vector(31 downto 0);
-	        immgen_out : out std_logic_logic_vector(31 downto 0) );
+	        immgen_out : out std_logic_vector(31 downto 0) );
 end ImmGen;
 
 architecture SignExtender of Immgen is
@@ -129,9 +129,9 @@ begin
 
   with instype select
 	      immediate <=   
-		                  		     		immgen_in(31) & "00000000000000000000" & immgen_in(30 downto 20)  when '00',  --I-TYPE
-			                          "00000000000000000000" & immgen_in(31 downto 25) & immgen(11 downto 7)  when '01' , --S-TYPE
-"0000000000000000000" & immgen_in(31) & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8)& "0"  when '10',  -- B-TYPE
+		                  		     		immgen_in(31) & "00000000000000000000" & immgen_in(30 downto 20)  when "00",  --I-TYPE
+			                          "00000000000000000000" & immgen_in(31 downto 25) & immgen_in(11 downto 7)  when "01" , --S-TYPE
+"0000000000000000000" & immgen_in(31) & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8)& "0"  when "10" , -- B-TYPE
                                                                     immgen_in(31 downto 12) & "000000000000"  when others;-- U-TYPE
 																
   immgen_out <= immediate;
@@ -147,24 +147,28 @@ END SignExtender;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.A
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity branchlogic is
-	PORT( ctrlinput : std_logic_vector (1 downto 0);
-	      zeroIn : std_logic;
-		  output : std_logic);
+	PORT( ctrlinput : in std_logic_vector (1 downto 0);
+	      zeroIn : in std_logic;
+		  output : out std_logic);
 		  
 end branchlogic;
 
 architecture brancher of branchlogic is
-
+SIGNAL otpsig: std_logic;
 begin
 with ctrlinput & zeroIn select
-			output <= '0' when '111' or '010', 
-			          '1' when '110' or '011',
+			otpsig <=  '0' when "111",
+                                   '0' when"010", 
+			           '1' when "110",
+                                   '1' when "011",
 					  '0' when others;
+
+output <= otpsig;
 					  
-end ctrlinput;
+end brancher;
 
 
 
