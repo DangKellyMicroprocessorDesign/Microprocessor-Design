@@ -112,9 +112,6 @@ architecture holistic of Processor is
 		  
 	end component branchlogic;
 
---signal internalopcode: std_logic_vector(6 downto 0);
---signal internalfunc3: std_logic_vector(2 downto 0);
---signal internalfunct7: std_logic_vector (6 downto 0);
 
 
 begin

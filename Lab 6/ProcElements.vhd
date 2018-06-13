@@ -79,6 +79,11 @@ begin
 	           "00001" when opcode = "0010011" and funct3 = "001"     else         -- SLLI
 	           "01001" when opcode = "0010011" and funct3 = "101";                 -- SRLI
 
+           --------------------------------------
+	   --     IMMGEN CONTROL OUTPUT        --
+           --------------------------------------
+	
+
 
 end Boss;
 
