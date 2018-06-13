@@ -46,15 +46,15 @@ Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
 Use ieee.std_logic_unsigned.all;
 
-entity adder_subtracter is
+entity adder_subtracterALU is
 	port( datain_a: in std_logic_vector(31 downto 0);
 		datain_b: in std_logic_vector(31 downto 0);
 		add_sub: in std_logic;
 		dataout: out std_logic_vector(31 downto 0);
 		co: out std_logic);
-end entity adder_subtracter;
+end entity adder_subtracterALU;
 
-architecture calc of adder_subtracter is
+architecture calc of adder_subtracterALU is
 
 	component fulladder is    -- FullAdder Component Declaration
 		port (a : in std_logic;
@@ -135,13 +135,13 @@ architecture ALU_Arch of ALU is
 	signal result: std_logic_vector(31 downto 0);
 
 -- ALU components
-component adder_subtracter
+component adder_subtracterALU
 	port( datain_a: in std_logic_vector(31 downto 0);
 		datain_b: in std_logic_vector(31 downto 0);
 		add_sub: in std_logic;
 		dataout: out std_logic_vector(31 downto 0);
 		co: out std_logic);
-end component adder_subtracter;
+end component adder_subtracterALU;
 
 component shift_register
 	port( datain: in std_logic_vector(31 downto 0);
@@ -153,7 +153,7 @@ end component shift_register;
 begin
 -- Add ALU VHDL implementation here
 
-	addsub: adder_subtracter port map(DataIn1, DataIn2, ALUCtrl(2), add_sub_ins, add_sub_co);
+	addsub: adder_subtracterALU port map(DataIn1, DataIn2, ALUCtrl(2), add_sub_ins, add_sub_co);
 	shift: shift_register port map(DataIn1, ALUCtrl(3), DataIn2(10 downto 6), shift_reg_ins);
 
 	and_ins <= DataIn1 and DataIn2;

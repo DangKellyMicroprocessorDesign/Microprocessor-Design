@@ -172,4 +172,4 @@ with result select
 	ALUResult <= result;
 
 end architecture ALU_Arch;
-© 2018 GitHub, Inc.
+

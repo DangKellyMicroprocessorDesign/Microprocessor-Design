@@ -180,9 +180,9 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity ImmGen is 
-	Port(   instype : in std_logic_vector(1 downto 0);
+	Port(         instype : in std_logic_vector(1 downto 0);
 		    immgen_in : in std_logic_vector(31 downto 0);
-	        immgen_out : out std_logic_vector(31 downto 0) );
+                   immgen_out : out std_logic_vector(31 downto 0) );
 end ImmGen;
 
 architecture SignExtender of Immgen is
