@@ -25,6 +25,8 @@ USE ieee.numeric_std.ALL;
 ENTITY tProcessor_vhd IS
 END tProcessor_vhd;
 
+
+---UNIT TESTS MUST STILL BE COMPLETED ---- BRi
 ARCHITECTURE behavior OF tProcessor_vhd IS 
 
 	-- Component Declaration for the Unit Under Test (UUT)

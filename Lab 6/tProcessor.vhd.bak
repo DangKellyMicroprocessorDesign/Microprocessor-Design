@@ -11,19 +11,12 @@
 --
 -- Notes      : 
 -- This excercise is developed using Questa Sim 
--- tProcessor.vhd will be used as a testbench for testing the Single Cycle Processor 
+-- tProcessor.vhd will be used as a testbench for testing the Single Cycle Processor design
 			
 -- Developer	Date		Activities
 -- DD		5/30/18 	Download lab 6 from Team DangKelly from Github
 
 
-
-
---------------------------------------------------------------------------------
---
--- Test Bench for LAB #6
---
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.all;
