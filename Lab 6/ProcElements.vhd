@@ -24,8 +24,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity BusMux2to1 is
 	Port(	selector: in std_logic;
-			In0, In1: in std_logic_vector(31 downto 0);
-			Result: out std_logic_vector(31 downto 0) );
+		In0, In1: in std_logic_vector(31 downto 0);
+		Result: out std_logic_vector(31 downto 0) );
 end entity BusMux2to1;
 
 architecture selection of BusMux2to1 is
@@ -33,8 +33,8 @@ SIGNAL highz: STD_LOGIC_VECTOR(31 DOWNTO 0) := "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 begin
           WITH selector SELECT
 		      Result <= In0 when '0',
-			            In1 when '1',
-                        highz when others;
+			        In1 when '1',
+                                highz when others;
 end architecture selection;
 
 --------------------------------------------------------------------------------
@@ -63,7 +63,7 @@ begin
 	--------------------------------------
         --       ALU CONTROL OUTPUT         --
         --------------------------------------
-	ALUCTRL <= "00000" when opcode = "0110011"                        else         -- ADD/ADDI
+	ALUCtrl <= "00000" when opcode = "0110011"                        else         -- ADD/ADDI
 	           "00100" when opcode = "0110011" and funct7 = "0100000" else         -- SUB
 	           "00010" when opcode = "0110011" and funct3 = "111"     else         -- AND
 		   "00011" when opcode = "0110011" and funct3 = "110"     else         -- OR
@@ -124,8 +124,6 @@ begin
                   "01" when opcode = "0100011" else                                             -- SW
 		  "10" when opcode = "1100011" else                                             -- B-Type
 		  "11";                                                                         -- Specifically LUI, but don't care when others  
-
- 
 
 end Boss;
 
