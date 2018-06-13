@@ -105,7 +105,17 @@ architecture holistic of Processor is
 			immgen_out : out std_logic_vector(31 downto 0) );
 		end component Immgen;
 			
-			
+	component branchlogic is
+		PORT( ctrlinput : in std_logic_vector (1 downto 0);
+		      zeroIn : in std_logic;
+       		      output : out std_logic);
+		  
+	end component branchlogic;
+
+signal internalopcode: std_logic_vector(6 downto 0);
+signal internalfunc3: std_logic_vector(2 downto 0);
+signal internalfunct7: std_logic_vector (6 downto 0);
+
 
 begin
 	-- Add your code here
@@ -114,16 +124,7 @@ begin
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	
 	
 	
