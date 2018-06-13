@@ -158,7 +158,7 @@ begin
 				a7_out when "10001",  -- a7 reg # x17 = 10001
 				Fail_read when others;
 	with ReadReg2 select
-		ReadData2 <= ZeroOut when "00000", -- Zero reg #00000
+		ReadData2 <=   ZeroOut when "00000", -- Zero reg #00000
 			     	a0_out when "01010",  -- a0 reg # x10 = 01010
 				a1_out when "01011",  -- a1 reg # x11 = 01011
 				a2_out when "01100",  -- a2 reg # x12 = 01100

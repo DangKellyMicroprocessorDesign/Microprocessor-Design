@@ -73,11 +73,6 @@ begin
     END IF;
 
 
-
-	
-	
-	
-
   end process RamProc;
 
 end staticRAM;	
