@@ -97,25 +97,25 @@ begin
 	--        MEMTOREG OUTPUT           --
 	--------------------------------------
 	MemToReg <= '1' when opcode = "0000011" and funct3 = "101" else
-		    '0' when others;
+		    '0';
 
 	-------------------------------------
 	--       MEMWRITE OUTPUT           --
 	-------------------------------------
 	
 	MemWrite <= '1' when opcode = "0100011" and funct3 = "010" else
-		    '0' when others;
+		    '0';
 	-------------------------------------
 	--         ALUSRC OUTPUT           --
 	-------------------------------------
 	ALUSrc <= '0' when opcode = "0110011" or opcode = "1100011" else -- R-type and B-type are the only times this is 0
-		  '1' when others;
+		  '1';
 
 	------------------------------------
 	--        REGWRITE OUTPUT         --
 	------------------------------------
 	RegWrite <= '0' when opcode = "0100011" or opcode = "1100011" else -- Branch Type and Store word
-		    '1' when others;
+		    '1';
 
 	-----------------------------------
 	--       IMMGEN OUTPUT           --
@@ -123,7 +123,7 @@ begin
 	ImmGen <= "00" when opcode = "0010011" or opcode = "0000011" or opcode = "0010011" else -- I-Type 
                   "01" when opcode = "0100011" else                                             -- SW
 		  "10" when opcode = "1100011" else                                             -- B-Type
-		  "11" when others;                                                             -- Specifically LUI, but don't care when others  
+		  "11";                                                                         -- Specifically LUI, but don't care when others  
 
  
 
