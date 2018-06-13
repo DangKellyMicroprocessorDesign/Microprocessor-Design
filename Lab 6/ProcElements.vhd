@@ -60,7 +60,25 @@ end Control;
 
 architecture Boss of Control is
 begin
--- Add your code here
+	    --------------------------------------
+            --       ALU CONTROL OUTPUT         --
+            --------------------------------------
+	ALUCTRL <= "00000" when opcode = "0110011"                        else         -- ADD/ADDI
+	           "00100" when opcode = "0110011" and funct7 = "0100000" else         -- SUB
+	           "00010" when opcode = "0110011" and funct3 = "111"     else         -- AND
+		   "00011" when opcode = "0110011" and funct3 = "110"     else         -- OR
+                   "00001" when opcode = "0110011" and funct3 = "001"     else         -- SLL
+                   "01001" when opcode = "0110011" and funct3 = "101"     else         -- SRL 
+                   "00000" when opcode = "0000011"                        else         -- LW
+                   "00000" when opcode = "0100011"                        else         -- SW
+	           "00100" when opcode = "1100011" and funct3 = "000"     else         -- BEQ
+                   "00100" when opcode = "1100011" and funct3 = "001"     else         -- BNE
+                   "00000" when opcode = "0110111"                        else         -- LUI
+                   "00010" when opcode = "0010011" and funct3 = "000"     else         -- ANDI
+	           "00011" when opcode = "0010011" and funct3 = "110"     else         -- ORI
+	           "00001" when opcode = "0010011" and funct3 = "001"     else         -- SLLI
+	           "01001" when opcode = "0010011" and funct3 = "101";                 -- SRLI
+
 
 end Boss;
 
