@@ -60,9 +60,9 @@ end Control;
 
 architecture Boss of Control is
 begin
-	    --------------------------------------
-            --       ALU CONTROL OUTPUT         --
-            --------------------------------------
+	--------------------------------------
+        --       ALU CONTROL OUTPUT         --
+        --------------------------------------
 	ALUCTRL <= "00000" when opcode = "0110011"                        else         -- ADD/ADDI
 	           "00100" when opcode = "0110011" and funct7 = "0100000" else         -- SUB
 	           "00010" when opcode = "0110011" and funct3 = "111"     else         -- AND
@@ -79,11 +79,53 @@ begin
 	           "00001" when opcode = "0010011" and funct3 = "001"     else         -- SLLI
 	           "01001" when opcode = "0010011" and funct3 = "101";                 -- SRLI
 
-           --------------------------------------
-	   --     IMMGEN CONTROL OUTPUT        --
-           --------------------------------------
-	
+	----------------------------------------
+	--         BRANCH LOGIC OUTPUT        --
+	----------------------------------------
+	Branch <= "01" when opcode = "110011" and funct3 = "000"  else	--BEQ
+	          "11" when opcode = "110011" and funct3 = "001"  else  --BNE
+	          "00";
 
+	--------------------------------------
+	--        MEMREAD OUTPUT            --
+ 	--------------------------------------
+	
+	MemRead <= '1' when opcode = "0000011" and funct3 = "101" else 
+	           '0';
+
+	--------------------------------------
+	--        MEMTOREG OUTPUT           --
+	--------------------------------------
+	MemToReg <= '1' when opcode = "0000011" and funct3 = "101" else
+		    '0';
+
+	-------------------------------------
+	--       MEMWRITE OUTPUT           --
+	-------------------------------------
+	
+	MemWrite <= '1' when opcode = "0100011" and funct3 = "010" else
+		    '0';
+	-------------------------------------
+	--         ALUSRC OUTPUT           --
+	-------------------------------------
+	ALUSrc <= '0' when opcode = "0110011" or opcode = "1100011" else -- R-type and B-type are the only times this is 0
+		  '1';
+
+	------------------------------------
+	--        REGWRITE OUTPUT         --
+	------------------------------------
+	RegWrite <= '0' when opcode = "0100011" or opcode = "1100011" else -- Branch Type and Store word
+		    '1';
+
+	-----------------------------------
+	--       IMMGEN OUTPUT           --
+	-----------------------------------
+	ImmGen <= "00" when opcode = "0010011" or opcode = "0000011" or opcode = "0010011" else -- I-Type 
+                  "01" when opcode = "0100011" else                                             -- SW
+		  "10" when opcode = "1100011" else                                             -- B-Type
+		  "11";                                                                         -- Specifically LUI, but don't care when others  
+
+ 
 
 end Boss;
 
