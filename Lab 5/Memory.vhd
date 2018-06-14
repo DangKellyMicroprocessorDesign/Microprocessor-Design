@@ -70,14 +70,8 @@ begin
 	DataOut <=  i_ram (to_integer(unsigned(Address)));
     ELSE
 	Dataout <= highz;
-    END IF;
-
-
-
+    END IF;	
 	
-	
-	
-
   end process RamProc;
 
 end staticRAM;	
