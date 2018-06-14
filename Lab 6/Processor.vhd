@@ -117,7 +117,7 @@ architecture holistic of Processor is
 	--     PROGRAM COUNTER SIGNALS    --
 	------------------------------------
 signal  PCout : std_logic_vector(31 downto 0);  --output of program counter to IM
-signal  PCplusFour : std_logic_vector(31 downto 0):= "00000000000000000000000000000100"; -- Signal for adding 4 to current instruction memory address
+--signal  PCplusFour : std_logic_vector(31 downto 0):= "00000000000000000000000000000100"; -- Signal for adding 4 to current instruction memory address
 signal  PCAdderOut : std_logic_vector(31 downto 0);  --result of PC+4
 signal  PCAddco : std_logic;  --Program counter adder carryout
 signal  BNEout: std_logic;  --Branch logic output
@@ -173,16 +173,13 @@ signal ALUSrcCTRL   : std_logic;
 signal RegWriteCTRL : std_logic;
 signal ImmGenCTRL   : std_logic_vector(1 downto 0);
 
-
-
-
 begin
 
 	-----------------------------------
 	--    PROGRAM COUNTER MAPS       --
 	-----------------------------------
 	PC :         ProgramCounter   port map(reset, clock, PCMuxOut, PCout);
-	PCAdder:     adder_subtracter  port map(PCout, PCplusFour, '0', PCAdderOut, PCAddco);
+	PCAdder:     adder_subtracter  port map(PCout,  "00000000000000000000000000000100", '0', PCAdderOut, PCAddco);
 	Branchadder: adder_subtracter port map(PCout, ImmGenOut, '0', BranchAddOut, BranchAddCarry);
 	PCmux:       BusMux2To1       port map(BNEout, PCAdderOut,  BranchAddOut, PCMuxOut);	
         BranchOrNot: branchlogic      port map(BranchCTRL, ALUZero, BNEOut);
