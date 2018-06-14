@@ -81,10 +81,10 @@ begin
 	----------------------------------------
 	--         BRANCH LOGIC OUTPUT        --
 	----------------------------------------
-	Branch <= "01" when opcode = "110011" and funct3 = "000"  else	--BEQ
-	          "11" when opcode = "110011" and funct3 = "001"  else  --BNE
-	          "00";
-
+	with opcode & funct3 select
+	Branch <= "10" when "1100011000", --beg
+		"01" when "1100011001", --bne 
+		"00" when others;
 	--------------------------------------
 	--        MEMREAD OUTPUT            --
  	--------------------------------------
@@ -127,38 +127,6 @@ begin
 end Boss;
 
 
---------------------------------------------------------------------------------
--- library IEEE;
--- use IEEE.STD_LOGIC_1164.ALL;
--- use IEEE.STD_LOGIC_ARITH.ALL;
--- use IEEE.STD_LOGIC_UNSIGNED.ALL;
-
--- entity ProgramCounter is
-    -- Port(Reset: in std_logic;
-	 -- Clock: in std_logic;
-	 -- PCin: in std_logic_vector(31 downto 0);
-	 -- PCout: out std_logic_vector(31 downto 0));
--- end entity ProgramCounter;
-
--- architecture executive of ProgramCounter is
-
--- SIGNAL lastcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
-
--- SIGNAL nextcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
-
--- begin
-
--- PCCount: process(Clock, Reset) IS -- Process takes these inputs to use
-
--- BEGIN	
-	-- IF RESET = '1' THEN
-		-- PCout <= X"003FFFFC";	
-	 -- ELSIF rising_edge(clock) THEN
-	    -- PCout <= PCin;  --On rising edge next gets PC+4              
-    -- END IF; 	
--- END PROCESS;
-
--- end executive;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -175,13 +143,12 @@ end entity ProgramCounter;
 architecture executive of ProgramCounter is
 
 begin
--- Add your code here
 	Process(Reset,Clock)
 	begin	
  		if Reset = '1' then
-			PCout <= X"003FFFFC"; --reset to start at address 0x003FFFFC
-		elsif rising_edge(Clock) then --not sure if falling_edge or rising_edge
-			PCout <= PCin; --maintains the address of the next instruction
+			PCout <= X"003FFFFC"; --after reset a clock cycle will pass and the program counter will resume at 0x00400000
+		elsif rising_edge(Clock) then 
+			PCout <= PCin; --latches the next instruction
 		end if;
 	end process; 
 end executive;
@@ -207,15 +174,16 @@ SIGNAL immediate : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 begin
 
-  with instype select
-	      immgen_out <=   
-                                             immgen_in(31) & "00000000000000000000" & immgen_in(30 downto 20)  when "00",  --I-TYPE
-                                    "00000000000000000000" & immgen_in(31 downto 25) & immgen_in(11 downto 7)  when "01" , --S-TYPE
-"0000000000000000000" & immgen_in(31) & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8)& "0"  when "10" , -- B-TYPE
-                                                                    immgen_in(31 downto 12) & "000000000000"  when others;-- U-TYPE
-																
-  
-					                                                                                                 
+  with instype&immgen_in(31) select
+	      immgen_out <=              "111111111111111111111" & immgen_in(30 downto 20) when "001",  --I_type
+                    			       "000000000000000000000" & immgen_in(30 downto 20) when "000",  --I_type
+		                              "111111111111111111111" & immgen_in(30 downto 25) & immgen_in(11 downto 7) when "011",  --S_type
+                       "000000000000000000000" & immgen_in(30 downto 25) & immgen_in(11 downto 7) when "010",  --S_type
+	    "11111111111111111111" & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8) & '0' when "101", --B_type
+                        "00000000000000000000" & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8) & '0' when "100", --B_type
+			                   "1" & immgen_in(30 downto 12) & "000000000000" when "111", --U_type
+                                           "0" & immgen_in(30 downto 12) & "000000000000" when "110", --U_type
+                                                       "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" when others;					                                                                                                 
 					 
 END SignExtender;
 
@@ -239,15 +207,13 @@ end branchlogic;
 architecture brancher of branchlogic is
 SIGNAL otpsig: std_logic;
 begin
---with ctrlinput & zeroIn select
+with ctrlinput & zeroIn select
 			
-			output<= '0';
-
-			-- '0' when "111",
-                       -- '0' when"010", 
-			           -- '1' when "110",
-                       -- '1' when "011",
-					   -- '0' when others;
+			output<= '0' when "111",
+                                  '0' when"010", 
+		                  '1' when "110",
+                                  '1' when "011",
+	                          '0' when others;
 end brancher;
 
 

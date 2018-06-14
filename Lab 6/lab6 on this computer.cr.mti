@@ -1,0 +1,60 @@
+{C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd}
+QuestaSim-64 vcom 10.5e Compiler 2017.06 Jun 16 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity tProcessor_vhd
+-- Compiling architecture behavior of tProcessor_vhd
+
+} {} {}} {C:/Users/kellyk12/Desktop/Lab 6/Memory.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/kellyk12/Desktop/Lab 6/Memory.vhd}
+QuestaSim-64 vcom 10.5e Compiler 2017.06 Jun 16 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity RAM
+-- Compiling architecture staticRAM of RAM
+-- Compiling entity Registers
+-- Compiling architecture remember of Registers
+-- Compiling entity bitstorage
+-- Compiling architecture memlike of bitstorage
+-- Compiling entity register8
+-- Compiling architecture memmy of register8
+-- Compiling entity register32
+-- Compiling architecture biggermem of register32
+
+} {} {}} {C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd}
+QuestaSim-64 vcom 10.5e Compiler 2017.06 Jun 16 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity InstructionRAM
+-- Compiling architecture instrucRAM of InstructionRAM
+
+} {} {}} {C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd} {2 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd}
+QuestaSim-64 vcom 10.5e Compiler 2017.06 Jun 16 2017
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity fulladder
+-- Compiling architecture addlike of fulladder
+-- Compiling entity adder_subtracter
+-- Compiling architecture calc of adder_subtracter
+-- Compiling entity shift_register
+-- Compiling architecture shifter of shift_register
+** Warning: C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd(103): (vcom-1186) Array type selected signal assignment expression must be of a locally static subtype.
+-- Compiling entity ALU
+-- Compiling architecture ALU_Arch of ALU
+
+} {} {}}

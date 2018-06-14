@@ -1,4 +1,3 @@
-
 -- Developer  : Don Dang, Brigid Kelly
 -- Project    : Lab 6
 -- ProjectName: Single Cycle Processor
@@ -99,19 +98,6 @@ architecture holistic of Processor is
 			co: out std_logic);
 	end component adder_subtracter;
 	
-	component ImmGen
-		Port(instype : in std_logic_vector(1 downto 0);
-			immgen_in : in std_logic_vector(31 downto 0);
-			immgen_out : out std_logic_vector(31 downto 0) );
-		end component Immgen;
-			
-	component branchlogic is
-		PORT( ctrlinput : in std_logic_vector (1 downto 0);
-		      zeroIn : in std_logic;
-       		      output : out std_logic);
-		  
-	end component branchlogic;
-
 
 	------------------------------------
 	--     PROGRAM COUNTER SIGNALS    --
@@ -182,7 +168,7 @@ begin
 	PCAdder:     adder_subtracter  port map(PCout,  "00000000000000000000000000000100", '0', PCAdderOut, PCAddco);
 	Branchadder: adder_subtracter port map(PCout, ImmGenOut, '0', BranchAddOut, BranchAddCarry);
 	PCmux:       BusMux2To1       port map(BNEout, PCAdderOut,  BranchAddOut, PCMuxOut);	
-        BranchOrNot: branchlogic      port map(BranchCTRL, ALUZero, BNEOut);
+       -- BranchOrNot: branchlogic      port map(BranchCTRL, ALUZero, BNEOut);
 
 	----------------------------------
 	--  INSTRUCTION MEMORY MAP      --
@@ -203,10 +189,8 @@ begin
        
 	RegMux:      BusMux2To1       port map(ALUSrcCTRL, RegDat2, ImmGenOut, Mux2ALU);
 
-	---------------------------------
-	--        IMMGEN MAP           --
-	---------------------------------
-	IGEN :       ImmGen           port map(ImmGenCTRL, IMOUT, ImmGenOut);
+
+	
 
 	--------------------------------
 	--        ALU MAP             --
@@ -222,5 +206,35 @@ begin
 
 	MeMux :      BusMux2To1       port map(MemToRegCTRL, ALUOut, MemReadOut, MeMuxOut);
 
+	---------------------------------
+	--        IMMGEN MAP           --
+	---------------------------------
+
+--IGEN :       ImmGen           port map(ImmGenCTRL, IMOUT, ImmGenOut);
+
+	with ImmGenCTRL & IMOUT(31) select
+	ImmGenOut <=   "111111111111111111111" & IMOUT(30 downto 20) when "001",  --I_type
+                       "000000000000000000000" & IMOUT(30 downto 20) when "000",  --I_type
+		       "111111111111111111111" & IMOUT(30 downto 25) & IMOUT(11 downto 7) when "011",  --S_type
+                       "000000000000000000000" & IMOUT(30 downto 25) & IMOUT(11 downto 7) when "010",  --S_type
+		        "11111111111111111111" & IMOUT(7) & IMOUT(30 downto 25) & IMOUT(11 downto 8) & '0' when "101", --B_type
+                        "00000000000000000000" & IMOUT(7) & IMOUT(30 downto 25) & IMOUT(11 downto 8) & '0' when "100", --B_type
+			                   "1" & IMOUT(30 downto 12) & "000000000000" when "111", --U_type
+                                           "0" & IMOUT(30 downto 12) & "000000000000" when "110", --U_type
+            "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" when others;
+	
+
+	-------------------------------------
+	--        BRANCH LOGIC             --
+	-------------------------------------
+
+	with BranchCTRL & ALUZero select
+	BNEOut <=   '1' when "101",
+                         '1' when "010",
+		         '0' when others;
+ 
+
 end holistic;
+
+
 
