@@ -148,23 +148,15 @@ SIGNAL lastcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL nextcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 begin
---adding code here
-PCCount: process(Clock, Reset, PCin) IS -- Process takes these inputs to use
 
-BEGIN
-lastcount <= PCin;  
-    
-    IF rising_edge(clock) THEN
-	nextcount <= PCin;  --On rising edge next gets PC+4
-              
+PCCount: process(Clock, Reset) IS -- Process takes these inputs to use
+
+BEGIN	
+	IF RESET = '1' THEN
+		PCout <= X"003FFFFC";	
+	 ELSIF rising_edge(clock) THEN
+	    PCout <= PCin;  --On rising edge next gets PC+4              
     END IF; 	
-
-    IF RESET = '1' THEN
-        lastcount <= X"00000000";
-	nextcount <= X"00400000";
-     END IF;  
-
-PCout <= nextcount;  -- OUTPUT FOR NEXT
 END PROCESS;
 
 end executive;
