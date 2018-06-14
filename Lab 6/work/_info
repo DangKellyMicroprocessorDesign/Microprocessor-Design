@@ -29,26 +29,26 @@ n@_opt1
 R3
 R0
 Eadder_subtracter
-Z4 w1528946848
+Z4 w1528945317
 Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z6 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z7 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z10 dC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6
-Z11 8C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd
-Z12 FC:/Users/kellyk12/Desktop/Lab 6/ALU.vhd
+Z11 8C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/registers.vhd
+Z12 FC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/registers.vhd
 l0
-L49
-VHgg2>hCAWInaF`FR:z=?;2
-!s100 2m_i3SXCJnNc=o?lXddKl2
+L133
+VELAYdzo2@iXVXNEn]2eY?0
+!s100 Gm3DBGOjVW;WUelh03DIP1
 Z13 OL;C;10.5e;63
 32
-Z14 !s110 1528965781
+Z14 !s110 1528967368
 !i10b 1
-Z15 !s108 1528965781.000000
-Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd|
-Z17 !s107 C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd|
+Z15 !s108 1528967368.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/registers.vhd|
+Z17 !s107 C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/registers.vhd|
 !i113 0
 Z18 o-work work -2002 -explicit
 Z19 tExplicit 1 CvgOpt 0
@@ -58,11 +58,11 @@ R6
 R7
 R8
 R9
-DEx4 work 16 adder_subtracter 0 22 Hgg2>hCAWInaF`FR:z=?;2
-l70
-L57
-VWI;_Am_1E01:k^DHCC5_00
-!s100 :QW=DF=@JYALSL^]UYiIH1
+DEx4 work 16 adder_subtracter 0 22 ELAYdzo2@iXVXNEn]2eY?0
+l153
+L141
+VeDbMB0AfW`B;c<k63>LCC1
+!s100 AAkTWJ@?OjKS[JI^fgHEA0
 R13
 32
 R14
@@ -81,19 +81,19 @@ R7
 R8
 R9
 Z21 dC:/Users/kellyk12/Desktop/Lab 6
-R11
-R12
+Z22 8C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd
+Z23 FC:/Users/kellyk12/Desktop/Lab 6/ALU.vhd
 l0
 L49
 V_Ya]D83=WU6QJ;D;z@g1?2
 !s100 _9GkfDY90dFT@FfobIk9P3
 R13
 32
-Z22 !s110 1528946403
+Z24 !s110 1528946403
 !i10b 1
-Z23 !s108 1528946403.000000
-R16
-R17
+Z25 !s108 1528946403.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd|
+Z27 !s107 C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd|
 !i113 0
 R18
 R19
@@ -110,35 +110,35 @@ VXLLT?je:V23730g9GMI2I2
 !s100 bSFjdn0gl:EfzMe?hlf<M2
 R13
 32
-R22
+R24
 !i10b 1
-R23
-R16
-R17
+R25
+R26
+R27
 !i113 0
 R18
 R19
 Ealu
-R4
+Z28 w1528946848
 R5
 R6
 R7
 R8
 R9
 R10
-R11
-R12
+Z29 8C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ALU.vhd
+Z30 FC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ALU.vhd
 l0
 L121
 VDk8fRBEW[ajm6YO0MB53k3
 !s100 VX5:bf3jaNO:T1bBQ=bOc1
 R13
 32
-R14
+Z31 !s110 1528967367
 !i10b 1
-R15
-R16
-R17
+Z32 !s108 1528967367.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ALU.vhd|
+Z34 !s107 C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ALU.vhd|
 !i113 0
 R18
 R19
@@ -155,35 +155,35 @@ VYGni=81K[9R:Z:^C4@XT10
 !s100 AnhQ:ZUAnSjVo744GET0J2
 R13
 32
-R14
+R31
 !i10b 1
-R15
-R16
-R17
+R32
+R33
+R34
 !i113 0
 R18
 R19
 Ebitstorage
-R20
+R4
 R5
 R6
 R7
 R8
 R9
 R10
-Z24 8C:/Users/kellyk12/Desktop/Lab 6/Memory.vhd
-Z25 FC:/Users/kellyk12/Desktop/Lab 6/Memory.vhd
+R11
+R12
 l0
-L178
-VnVNZ`mdFD@B=`;fViQ`5B0
-!s100 @T:IRSYWc6QzU8O7:ZhcN0
+L12
+VdCGWj`@VbHgV172Jg^EQX1
+!s100 WJnIlGlmDL72kEaZWY7LI2
 R13
 32
 R14
 !i10b 1
 R15
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/Memory.vhd|
-Z27 !s107 C:/Users/kellyk12/Desktop/Lab 6/Memory.vhd|
+R16
+R17
 !i113 0
 R18
 R19
@@ -193,41 +193,41 @@ R6
 R7
 R8
 R9
-DEx4 work 10 bitstorage 0 22 nVNZ`mdFD@B=`;fViQ`5B0
-l187
-L185
-VjY9aboXQ[dXMRWlJjXEoS0
-!s100 MIX<K9W1WH5JLVTObbzW31
+DEx4 work 10 bitstorage 0 22 dCGWj`@VbHgV172Jg^EQX1
+l21
+L19
+V<KY=mN>W^6@>cW`V]6Y^Y2
+!s100 >C<lEnBjkno6BlaBg7zNz3
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R16
+R17
 !i113 0
 R18
 R19
 Ebranchlogic
-Z28 w1528965763
+Z35 w1528967364
 R6
 R5
 R8
 R9
 R10
-Z29 8C:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd
-Z30 FC:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd
+Z36 8C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ProcElements.vhd
+Z37 FC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ProcElements.vhd
 l0
-L210
-Vb`[F2>=aOLfe@8]C?OMi<3
-!s100 oPZ46eVT15ebj<ohJDAM=3
+L201
+VK_4;Gc1e^I^_WJajg=^Bh3
+!s100 =0K:c@WZZJ1MIWh29zJI:1
 R13
 32
-Z31 !s110 1528965782
+R14
 !i10b 1
-Z32 !s108 1528965782.000000
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd|
-Z34 !s107 C:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd|
+R15
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ProcElements.vhd|
+Z39 !s107 C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/ProcElements.vhd|
 !i113 0
 R18
 R19
@@ -236,41 +236,41 @@ R6
 R5
 R8
 R9
-DEx4 work 11 branchlogic 0 22 b`[F2>=aOLfe@8]C?OMi<3
-l219
-L217
-Vac`PeC8i;b7RE]Sa1b9hF1
-!s100 kAbQNf1Om@K[3<kXQ0An[2
+DEx4 work 11 branchlogic 0 22 K_4;Gc1e^I^_WJajg=^Bh3
+l210
+L208
+V_FN57kTCb^QY[HXY=N9jF3
+!s100 zo58b4X`Z3TJRlo;O24R^0
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
 Ebusmux2to1
-R28
+R35
 R6
 R5
 R8
 R9
 R10
-R29
-R30
+R36
+R37
 l0
 L25
 V]ERD2jgi`IJL<2[XifT0A2
 !s100 UVb?HO88m2Z42H0:5;8OS3
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
@@ -286,34 +286,34 @@ V]6fcb`EK2>RG0P<R9XH;02
 !s100 6DYLgdWL1aJW_]R7Y?RBT0
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
 Econtrol
-R28
+R35
 R6
 R5
 R8
 R9
 R10
-R29
-R30
+R36
+R37
 l0
 L45
 V@`YjFU=f[@g3WUj__hMFk2
 !s100 je=;2=<4VUP_EGzFi0VBL0
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
@@ -325,15 +325,15 @@ R9
 DEx4 work 7 control 0 22 @`YjFU=f[@g3WUj__hMFk2
 l61
 L60
-VNbRHNA5kb[4Cg1S9[=5aP1
-!s100 9DFe6FGo;hbfFFhFJngB?3
+V0=bfLTzL5>chz@M4b^FTl0
+!s100 9N`zV=FMRl7h]2C?Z8_Rd3
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
@@ -348,9 +348,9 @@ R10
 R11
 R12
 l0
-L27
-V@9lD3O9WMjkb:6gE1A9oV2
-!s100 ik7FfXb8B[kPJBMAYAMA`0
+L39
+V=FPW_d1N0HAmBXP_4FHUj0
+!s100 MPWGQOD3M^:9b24Oc4LP:1
 R13
 32
 R14
@@ -367,11 +367,11 @@ R6
 R7
 R8
 R9
-DEx4 work 9 fulladder 0 22 @9lD3O9WMjkb:6gE1A9oV2
-l37
-L36
-V<b>f_`Aej]eH>8VR@cjF70
-!s100 T_fgNUA2[8d<JzSfZcY9S3
+DEx4 work 9 fulladder 0 22 =FPW_d1N0HAmBXP_4FHUj0
+l49
+L48
+VYAZhA1hLlNW^KgldE^3f01
+!s100 <Eni[?PWcgZ?5R]=[zAgg3
 R13
 32
 R14
@@ -383,25 +383,25 @@ R17
 R18
 R19
 Eimmgen
-R28
+R35
 R6
 R5
 R8
 R9
 R10
-R29
-R30
+R36
+R37
 l0
-L174
-V51;ZnmfLB<FB=GDOod<K>1
-!s100 N5CV0@VYbMKe`1Y7fY_]n2
+L165
+V6>>CYhH>HTJNnaPN9TPhZ2
+!s100 L@HcS^9PefAo[24=U4@YB3
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
@@ -410,18 +410,18 @@ R6
 R5
 R8
 R9
-DEx4 work 6 immgen 0 22 51;ZnmfLB<FB=GDOod<K>1
-l185
-L180
-V7X@lFjOHL7JX5L8>b28g80
-!s100 iHHalPGWA53mZmieVI?5V1
+DEx4 work 6 immgen 0 22 6>>CYhH>HTJNnaPN9TPhZ2
+l176
+L171
+VN^<TKWKVWU6YLnzFJD`_G3
+!s100 ;DEhL0D3]ea1^@gSlVIG02
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
@@ -433,19 +433,19 @@ R7
 R8
 R9
 R10
-Z35 8C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd
-Z36 FC:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd
+Z40 8C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/InstrMemory.vhd
+Z41 FC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/InstrMemory.vhd
 l0
 L11
 V66Om^UA6FP5;hL9MV1ok`0
 !s100 X;oSEnc^]dZ`]B<Sbo?Bb0
 R13
 32
-R14
+R31
 !i10b 1
-R15
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd|
-Z38 !s107 C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd|
+R32
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/InstrMemory.vhd|
+Z43 !s107 C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/InstrMemory.vhd|
 !i113 0
 R18
 R19
@@ -462,34 +462,34 @@ VQ>3WHikkm6j[aAVO_Xf;c3
 !s100 k19_^o4YCnGDe;OdWnHVl0
 R13
 32
-R14
+R31
 !i10b 1
-R15
-R37
-R38
+R32
+R42
+R43
 !i113 0
 R18
 R19
 Eprocessor
-Z39 w1528950959
+Z44 w1528950959
 R6
 R5
 R8
 R9
 R10
-Z40 8C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd
-Z41 FC:/Users/kellyk12/Desktop/Lab 6/Processor.vhd
+Z45 8C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/Processor.vhd
+Z46 FC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/Processor.vhd
 l0
 L24
 ViS_O8IcFGCS8bBIAHI]Xo1
 !s100 O2LZf99d^8AM12bn:]e6A2
 R13
 32
-R31
+R14
 !i10b 1
-R32
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd|
-Z43 !s107 C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd|
+R15
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/Processor.vhd|
+Z48 !s107 C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/Processor.vhd|
 !i113 0
 R18
 R19
@@ -505,34 +505,34 @@ V:Q2m3Bjik8>dcamzDoUe=1
 !s100 TVZkaB3Z=Nn_l?<j;1[mT3
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R42
-R43
+R15
+R47
+R48
 !i113 0
 R18
 R19
 Eprogramcounter
-R28
+R35
 R6
 R5
 R8
 R9
 R10
-R29
-R30
+R36
+R37
 l0
-L146
-V8AX03jzOZ^C;hUS0aQ3`f1
-!s100 ?JIQ1CeA=gdRgK;lPD34Q1
+L137
+VQBUk:J78ML^lj`no_YJLk1
+!s100 aheMHfe_c_5^]9?CZ=1J@2
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
@@ -541,42 +541,42 @@ R6
 R5
 R8
 R9
-DEx4 work 14 programcounter 0 22 8AX03jzOZ^C;hUS0aQ3`f1
-l155
-L153
-VjciKD4f538B6[B^RD]KAn2
-!s100 `<mQ0AdG742l66EDRk67e3
+DEx4 work 14 programcounter 0 22 QBUk:J78ML^lj`no_YJLk1
+l146
+L144
+Vc9Kin9SLYle=C^Q8[JRE81
+!s100 hbLF6Q[DJim?dIVUDz0n40
 R13
 32
-R31
+R14
 !i10b 1
-R32
-R33
-R34
+R15
+R38
+R39
 !i113 0
 R18
 R19
 Eram
-R20
+R4
 R5
 R6
 R7
 R8
 R9
 R10
-R24
-R25
+Z49 8C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/RAM.vhd
+Z50 FC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/RAM.vhd
 l0
-L30
-V:cLJQ;i_j>AjX2kVd`HTa3
-!s100 9BN?@8G6?^X;MQkJCS>>22
+L11
+VNc@NT[?`T^`5=oR;nc;z_2
+!s100 :B:Ji:295CNahda9_8<OC1
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/RAM.vhd|
+Z52 !s107 C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/RAM.vhd|
 !i113 0
 R18
 R19
@@ -586,42 +586,42 @@ R6
 R7
 R8
 R9
-DEx4 work 3 ram 0 22 :cLJQ;i_j>AjX2kVd`HTa3
-l47
-L40
-VTB:_=kSTc>Vjhd_JZOCR]1
-!s100 V82RL_[QQ8NfQCl7^U`hb1
+DEx4 work 3 ram 0 22 Nc@NT[?`T^`5=oR;nc;z_2
+l27
+L21
+VXEPSZz^;^k>e>1]bnc[gm3
+!s100 NF_CfU?FGXXU``c4C8KDU2
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R51
+R52
 !i113 0
 R18
 R19
 Eregister32
-R20
+R4
 R5
 R6
 R7
 R8
 R9
 R10
-R24
-R25
+R11
+R12
 l0
-L261
-VZ@Gf=?m`CjIYCg4:FZjY70
-!s100 f=`bA8ASclk4WXG[ZOQk01
+L93
+V;_P@`^0ozhKbnlYO><=_?2
+!s100 9iQJ<GY^<k:U6EQjm59Q=0
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R16
+R17
 !i113 0
 R18
 R19
@@ -631,42 +631,42 @@ R6
 R7
 R8
 R9
-DEx4 work 10 register32 0 22 Z@Gf=?m`CjIYCg4:FZjY70
-l279
-L268
-Ve1EbJk2kJ4[SD=Q>Xez>c3
-!s100 :;a>_Nni<G?aV@oZhU_7F0
+DEx4 work 10 register32 0 22 ;_P@`^0ozhKbnlYO><=_?2
+l111
+L100
+V6Mhd]BgXQYiZ;Aciozlja1
+!s100 `]_;4V8Y7fGk@hZYgnXo]0
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R16
+R17
 !i113 0
 R18
 R19
 Eregister8
-R20
+R4
 R5
 R6
 R7
 R8
 R9
 R10
-R24
-R25
+R11
+R12
 l0
-L212
-VA]_G@jlOX:BEn]QzMaVz<2
-!s100 jeH_6U?Y6kgG=B<j4HMk=3
+L61
+VCmLjgjT4F;9OEK[DbRco72
+!s100 DGz4Yz>el_lHHIC:Ik3m10
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R16
+R17
 !i113 0
 R18
 R19
@@ -676,42 +676,42 @@ R6
 R7
 R8
 R9
-DEx4 work 9 register8 0 22 A]_G@jlOX:BEn]QzMaVz<2
-l229
-L220
-VM8U0^YK[:z_8AZNaINL^=0
-!s100 BQRn_K23Wh55ASJ>7k_Wm1
+DEx4 work 9 register8 0 22 CmLjgjT4F;9OEK[DbRco72
+l75
+L68
+V^h2a8@LHN4:k:T5IfWW_J3
+!s100 fNiYJAKNS2<cKbeER<Sl]3
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R16
+R17
 !i113 0
 R18
 R19
 Eregisters
-R20
+R4
 R5
 R6
 R7
 R8
 R9
 R10
-R24
-R25
+R49
+R50
 l0
-L89
-VCSdHOjIazbEV08`2j:oTn3
-!s100 ;RaH1i2cfkbb`NKaa]]JG2
+L65
+V6CW=b9z^Po__^ol8C_aOk1
+!s100 4<G=EEATDPRGgh9NLn_5b0
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R51
+R52
 !i113 0
 R18
 R19
@@ -721,18 +721,18 @@ R6
 R7
 R8
 R9
-DEx4 work 9 registers 0 22 CSdHOjIazbEV08`2j:oTn3
-l115
-L99
-Vj29RNidZ:PfLZCk4IbVm62
-!s100 _DHS^TG^zYK74>bl]GTO93
+DEx4 work 9 registers 0 22 6CW=b9z^Po__^ol8C_aOk1
+l89
+L75
+Vfi5f19I^`<=83E4:5@4lQ2
+!s100 CGLD0e_6feAPcaQN`^M3d0
 R13
 32
 R14
 !i10b 1
 R15
-R26
-R27
+R51
+R52
 !i113 0
 R18
 R19
@@ -747,9 +747,9 @@ R10
 R11
 R12
 l0
-L93
-VQmjRDSS8gSbAbDTCOHo`j0
-!s100 T9nQL7F7WK<0;8:kZOWXD1
+L172
+VecXT5;k7c5B;m6C@UV:kS2
+!s100 dE>gQJ:n[eccffBB_SH[H3
 R13
 32
 R14
@@ -766,11 +766,11 @@ R6
 R7
 R8
 R9
-DEx4 work 14 shift_register 0 22 QmjRDSS8gSbAbDTCOHo`j0
-l101
-L100
-VTeZ`3o02_mTlIK4kSPEQ61
-!s100 8G45X=B0XAJUa:fgRTj6U1
+DEx4 work 14 shift_register 0 22 ecXT5;k7c5B;m6C@UV:kS2
+l187
+L179
+V`?GK6G7VRG?Di8_6YTTMD3
+!s100 o[KzR[BYA@a>77:T@O?M>2
 R13
 32
 R14
@@ -782,15 +782,15 @@ R17
 R18
 R19
 Etprocessor_vhd
-Z44 w1528946248
+Z53 w1528946248
 R7
 R5
 R6
 R8
 R9
 R10
-Z45 8C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd
-Z46 FC:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd
+Z54 8C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/tProcessor.vhd
+Z55 FC:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/tProcessor.vhd
 l0
 L25
 VePiF^3U6:MIWQj>I8c@A61
@@ -800,8 +800,8 @@ R13
 R31
 !i10b 1
 R32
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd|
-Z48 !s107 C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd|
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/tProcessor.vhd|
+Z57 !s107 C:/Users/kellyk12/Documents/GitHub/Microprocessor-Design/Lab 6/tProcessor.vhd|
 !i113 0
 R18
 R19
@@ -811,18 +811,18 @@ R5
 R6
 R8
 R9
-Z49 DEx4 work 14 tprocessor_vhd 0 22 ePiF^3U6:MIWQj>I8c@A61
+DEx4 work 14 tprocessor_vhd 0 22 ePiF^3U6:MIWQj>I8c@A61
 l42
 L30
-Z50 V3kYfH2413<5HX@jndQMgb1
-Z51 !s100 f9U@36EBleW0;<WiJ>6Kb2
+V3kYfH2413<5HX@jndQMgb1
+!s100 f9U@36EBleW0;<WiJ>6Kb2
 R13
 32
 R31
 !i10b 1
 R32
-R47
-R48
+R56
+R57
 !i113 0
 R18
 R19
