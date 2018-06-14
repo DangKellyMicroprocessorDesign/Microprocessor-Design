@@ -129,6 +129,38 @@ end Boss;
 
 
 --------------------------------------------------------------------------------
+-- library IEEE;
+-- use IEEE.STD_LOGIC_1164.ALL;
+-- use IEEE.STD_LOGIC_ARITH.ALL;
+-- use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+-- entity ProgramCounter is
+    -- Port(Reset: in std_logic;
+	 -- Clock: in std_logic;
+	 -- PCin: in std_logic_vector(31 downto 0);
+	 -- PCout: out std_logic_vector(31 downto 0));
+-- end entity ProgramCounter;
+
+-- architecture executive of ProgramCounter is
+
+-- SIGNAL lastcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+-- SIGNAL nextcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+-- begin
+
+-- PCCount: process(Clock, Reset) IS -- Process takes these inputs to use
+
+-- BEGIN	
+	-- IF RESET = '1' THEN
+		-- PCout <= X"003FFFFC";	
+	 -- ELSIF rising_edge(clock) THEN
+	    -- PCout <= PCin;  --On rising edge next gets PC+4              
+    -- END IF; 	
+-- END PROCESS;
+
+-- end executive;
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
@@ -143,22 +175,16 @@ end entity ProgramCounter;
 
 architecture executive of ProgramCounter is
 
-SIGNAL lastcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
-
-SIGNAL nextcount : STD_LOGIC_VECTOR(31 DOWNTO 0);
-
 begin
-
-PCCount: process(Clock, Reset) IS -- Process takes these inputs to use
-
-BEGIN	
-	IF RESET = '1' THEN
-		PCout <= X"003FFFFC";	
-	 ELSIF rising_edge(clock) THEN
-	    PCout <= PCin;  --On rising edge next gets PC+4              
-    END IF; 	
-END PROCESS;
-
+-- Add your code here
+	Process(Reset,Clock)
+	begin	
+ 		if Reset = '1' then
+			PCout <= X"003FFFFC"; --reset to start at address 0x003FFFFC
+		elsif rising_edge(Clock) then --not sure if falling_edge or rising_edge
+			PCout <= PCin; --maintains the address of the next instruction
+		end if;
+	end process; 
 end executive;
 
 --------------------------------------------------------------------------------
@@ -215,6 +241,7 @@ architecture brancher of branchlogic is
 SIGNAL otpsig: std_logic;
 begin
 with ctrlinput & zeroIn select
+			
 			output<= '0';
 
 			-- '0' when "111",
