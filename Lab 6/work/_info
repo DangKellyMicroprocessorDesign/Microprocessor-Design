@@ -44,9 +44,9 @@ VHgg2>hCAWInaF`FR:z=?;2
 !s100 2m_i3SXCJnNc=o?lXddKl2
 Z13 OL;C;10.5e;63
 32
-Z14 !s110 1528964425
+Z14 !s110 1528965781
 !i10b 1
-Z15 !s108 1528964425.000000
+Z15 !s108 1528965781.000000
 Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd|
 Z17 !s107 C:/Users/kellyk12/Desktop/Lab 6/ALU.vhd|
 !i113 0
@@ -209,7 +209,7 @@ R27
 R18
 R19
 Ebranchlogic
-Z28 w1528964141
+Z28 w1528965763
 R6
 R5
 R8
@@ -223,11 +223,11 @@ Vb`[F2>=aOLfe@8]C?OMi<3
 !s100 oPZ46eVT15ebj<ohJDAM=3
 R13
 32
-R14
+Z31 !s110 1528965782
 !i10b 1
-R15
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd|
-Z32 !s107 C:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd|
+Z32 !s108 1528965782.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd|
+Z34 !s107 C:/Users/kellyk12/Desktop/Lab 6/ProcElements.vhd|
 !i113 0
 R18
 R19
@@ -243,11 +243,11 @@ Vac`PeC8i;b7RE]Sa1b9hF1
 !s100 kAbQNf1Om@K[3<kXQ0An[2
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -266,11 +266,11 @@ V]ERD2jgi`IJL<2[XifT0A2
 !s100 UVb?HO88m2Z42H0:5;8OS3
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -286,11 +286,11 @@ V]6fcb`EK2>RG0P<R9XH;02
 !s100 6DYLgdWL1aJW_]R7Y?RBT0
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -309,11 +309,11 @@ V@`YjFU=f[@g3WUj__hMFk2
 !s100 je=;2=<4VUP_EGzFi0VBL0
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -325,15 +325,15 @@ R9
 DEx4 work 7 control 0 22 @`YjFU=f[@g3WUj__hMFk2
 l61
 L60
-V:U1@JeklmQhlFoBocBfB@3
-!s100 eXZ:f2Gih^5f^ga_SFX003
+VNbRHNA5kb[4Cg1S9[=5aP1
+!s100 9DFe6FGo;hbfFFhFJngB?3
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -397,11 +397,11 @@ V51;ZnmfLB<FB=GDOod<K>1
 !s100 N5CV0@VYbMKe`1Y7fY_]n2
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -417,11 +417,11 @@ V7X@lFjOHL7JX5L8>b28g80
 !s100 iHHalPGWA53mZmieVI?5V1
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -433,8 +433,8 @@ R7
 R8
 R9
 R10
-Z33 8C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd
-Z34 FC:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd
+Z35 8C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd
+Z36 FC:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd
 l0
 L11
 V66Om^UA6FP5;hL9MV1ok`0
@@ -444,8 +444,8 @@ R13
 R14
 !i10b 1
 R15
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd|
-Z36 !s107 C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd|
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd|
+Z38 !s107 C:/Users/kellyk12/Desktop/Lab 6/InstrMemory.vhd|
 !i113 0
 R18
 R19
@@ -465,31 +465,31 @@ R13
 R14
 !i10b 1
 R15
-R35
-R36
+R37
+R38
 !i113 0
 R18
 R19
 Eprocessor
-Z37 w1528950959
+Z39 w1528950959
 R6
 R5
 R8
 R9
 R10
-Z38 8C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd
-Z39 FC:/Users/kellyk12/Desktop/Lab 6/Processor.vhd
+Z40 8C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd
+Z41 FC:/Users/kellyk12/Desktop/Lab 6/Processor.vhd
 l0
 L24
 ViS_O8IcFGCS8bBIAHI]Xo1
 !s100 O2LZf99d^8AM12bn:]e6A2
 R13
 32
-R14
+R31
 !i10b 1
-R15
-Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd|
-Z41 !s107 C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd|
+R32
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd|
+Z43 !s107 C:/Users/kellyk12/Desktop/Lab 6/Processor.vhd|
 !i113 0
 R18
 R19
@@ -505,11 +505,11 @@ V:Q2m3Bjik8>dcamzDoUe=1
 !s100 TVZkaB3Z=Nn_l?<j;1[mT3
 R13
 32
-R14
+R31
 !i10b 1
-R15
-R40
-R41
+R32
+R42
+R43
 !i113 0
 R18
 R19
@@ -528,11 +528,11 @@ V8AX03jzOZ^C;hUS0aQ3`f1
 !s100 ?JIQ1CeA=gdRgK;lPD34Q1
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -548,11 +548,11 @@ VjciKD4f538B6[B^RD]KAn2
 !s100 `<mQ0AdG742l66EDRk67e3
 R13
 32
-R14
-!i10b 1
-R15
 R31
+!i10b 1
 R32
+R33
+R34
 !i113 0
 R18
 R19
@@ -782,24 +782,24 @@ R17
 R18
 R19
 Etprocessor_vhd
-Z42 w1528946248
+Z44 w1528946248
 R7
 R5
 R6
 R8
 R9
 R10
-Z43 8C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd
-Z44 FC:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd
+Z45 8C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd
+Z46 FC:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd
 l0
 L25
 VePiF^3U6:MIWQj>I8c@A61
 !s100 i7z5`nMQO`56<RcIFi?j70
 R13
 32
-Z45 !s110 1528964426
+R31
 !i10b 1
-Z46 !s108 1528964426.000000
+R32
 Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd|
 Z48 !s107 C:/Users/kellyk12/Desktop/Lab 6/tProcessor.vhd|
 !i113 0
@@ -818,9 +818,9 @@ Z50 V3kYfH2413<5HX@jndQMgb1
 Z51 !s100 f9U@36EBleW0;<WiJ>6Kb2
 R13
 32
-R45
+R31
 !i10b 1
-R46
+R32
 R47
 R48
 !i113 0
