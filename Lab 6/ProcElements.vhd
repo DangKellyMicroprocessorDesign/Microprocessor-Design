@@ -183,13 +183,13 @@ SIGNAL immediate : STD_LOGIC_VECTOR(31 DOWNTO 0);
 begin
 
   with instype select
-	      immediate <=   
+	      immgen_out <=   
                                              immgen_in(31) & "00000000000000000000" & immgen_in(30 downto 20)  when "00",  --I-TYPE
                                     "00000000000000000000" & immgen_in(31 downto 25) & immgen_in(11 downto 7)  when "01" , --S-TYPE
 "0000000000000000000" & immgen_in(31) & immgen_in(7) & immgen_in(30 downto 25) & immgen_in(11 downto 8)& "0"  when "10" , -- B-TYPE
                                                                     immgen_in(31 downto 12) & "000000000000"  when others;-- U-TYPE
 																
-  immgen_out <= immediate;
+  
 					                                                                                                 
 					 
 END SignExtender;
@@ -215,14 +215,11 @@ architecture brancher of branchlogic is
 SIGNAL otpsig: std_logic;
 begin
 with ctrlinput & zeroIn select
-			otpsig <=  '0' when "111",
-                                   '0' when"010", 
+			output<=   '0' when "111",
+                       '0' when"010", 
 			           '1' when "110",
-                                   '1' when "011",
-					  '0' when others;
-
-output <= otpsig;
-					  
+                       '1' when "011",
+					   '0' when others;
 end brancher;
 
 
