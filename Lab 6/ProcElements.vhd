@@ -215,11 +215,13 @@ architecture brancher of branchlogic is
 SIGNAL otpsig: std_logic;
 begin
 with ctrlinput & zeroIn select
-			output<=   '0' when "111",
-                       '0' when"010", 
-			           '1' when "110",
-                       '1' when "011",
-					   '0' when others;
+			output<= '0';
+
+			-- '0' when "111",
+                       -- '0' when"010", 
+			           -- '1' when "110",
+                       -- '1' when "011",
+					   -- '0' when others;
 end brancher;
 
 
