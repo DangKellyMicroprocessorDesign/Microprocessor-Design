@@ -239,7 +239,7 @@ end branchlogic;
 architecture brancher of branchlogic is
 SIGNAL otpsig: std_logic;
 begin
-with ctrlinput & zeroIn select
+--with ctrlinput & zeroIn select
 			
 			output<= '0';
 
