@@ -29,12 +29,11 @@ entity BusMux2to1 is
 end entity BusMux2to1;
 
 architecture selection of BusMux2to1 is
-SIGNAL highz: STD_LOGIC_VECTOR(31 DOWNTO 0) := "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
+--SIGNAL highz: STD_LOGIC_VECTOR(31 DOWNTO 0) := "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
 begin
           WITH selector SELECT
 		      Result <= In0 when '0',
-			        In1 when '1',
-                                highz when others;
+			        In1 when others;
 end architecture selection;
 
 --------------------------------------------------------------------------------
