@@ -62,11 +62,12 @@ begin
 	--------------------------------------
         --       ALU CONTROL OUTPUT         --
         --------------------------------------
-	ALUCtrl <= "00000" when opcode = "0110011" or (opcode = "0010011" and funct3 = "000"  else         -- ADD/ADDI
-	           "00100" when opcode = "0110011" and funct7 = "0100000" else                               -- SUB
-	           "00010" when opcode = "0110011" and funct3 = "111"     else                                -- AND
+	ALUCtrl <= "00000" when opcode = "0110011" and funct3 = "000" and funct7 = "0000000" else 
+	           "00000" when opcode = "0010011" and funct3 = "000"     else                          -- ADD/ADDI
+	           "00100" when opcode = "0110011" and funct3 = "000" and funct7 = "0100000" else           -- SUB
+	           "00010" when opcode = "0110011" and funct3 = "111"     else                             -- AND
 		   "00011" when opcode = "0110011" and funct3 = "110"     else                          -- OR
-                   "00001" when opcode = "0110011" and funct3 = "001"     else                              -- SLL
+                   "00001" when opcode = "0110011" and funct3 = "001"     else                        -- SLL
                    "01001" when opcode = "0110011" and funct3 = "101"     else                          -- SRL 
                    "00000" when opcode = "0000011"                        else                           -- LW
                    "00000" when opcode = "0100011"                        else                       -- SW

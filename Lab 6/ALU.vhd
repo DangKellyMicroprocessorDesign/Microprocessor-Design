@@ -154,7 +154,7 @@ begin
 -- Add ALU VHDL implementation here
 
 	addsub: adder_subtracter port map(DataIn1, DataIn2, ALUCtrl(2), add_sub_ins, add_sub_co);
-	shift: shift_register port map(DataIn1, ALUCtrl(3), DataIn2(10 downto 6), shift_reg_ins);
+	shift: shift_register port map(DataIn1, ALUCtrl(3), DataIn2(4 downto 0), shift_reg_ins);
 
 	and_ins <= DataIn1 and DataIn2;
 	or_ins <= DataIn1 or DataIn2;
