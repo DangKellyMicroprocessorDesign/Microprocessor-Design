@@ -90,13 +90,16 @@ begin
 	--        MEMREAD OUTPUT            --
  	--------------------------------------
 	
-	MemRead <= '1' when opcode = "0000011" and funct3 = "101" else 
-	           '0';
-
+	--MemRead <= '1' when opcode = "0000011" and funct3 = "101" else
+	MemRead <= '0'; 
+--	MemRead <= '1' when opcode = "0000011" else
+--	           '0';
+--
 	--------------------------------------
 	--        MEMTOREG OUTPUT           --
 	--------------------------------------
-	MemToReg <= '1' when opcode = "0000011" and funct3 = "101" else
+	--MemToReg <= '1' when opcode = "0000011" and funct3 = "101" else
+	MemToReg <= '1' when opcode = "0000011" else
 		    '0';
 
 	-------------------------------------
@@ -114,7 +117,8 @@ begin
 	------------------------------------
 	--        REGWRITE OUTPUT         --
 	------------------------------------
-	RegWrite <='0' when opcode="0100011" AND funct3="010" else	  	
+	RegWrite <='1' when opcode="0000011" else
+		   '0' when opcode="0100011" AND funct3="010" else	  	
 		   '0' when opcode="1100011" AND funct3="000" else	   
 		   '0' when opcode="1100011" AND funct3="001" else	    
 		   (not clk);

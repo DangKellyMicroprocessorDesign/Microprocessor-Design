@@ -62,22 +62,22 @@ begin
 	--------------------------------------
         --       ALU CONTROL OUTPUT         --
         --------------------------------------
-	ALUCtrl <= "00000" when opcode = "0110011" and funct3 = "000" and funct7 = "0000000" else 
-	           "00000" when opcode = "0010011" and funct3 = "000"     else                          -- ADD/ADDI
-	           "00100" when opcode = "0110011" and funct3 = "000" and funct7 = "0100000" else           -- SUB
-	           "00010" when opcode = "0110011" and funct3 = "111"     else                             -- AND
+	ALUCtrl <= "00000" when opcode = "0110011" and funct3 = "000" and funct7 = "0000000" else       --ADD
+	           "00000" when opcode = "0010011" and funct3 = "000"     else                          --ADDI
+	           "00100" when opcode = "0110011" and funct3 = "000" and funct7 = "0100000" else       -- SUB
+	           "00010" when opcode = "0110011" and funct3 = "111"     else                          -- AND
 		   "00011" when opcode = "0110011" and funct3 = "110"     else                          -- OR
-                   "00001" when opcode = "0110011" and funct3 = "001"     else                        -- SLL
+                   "00001" when opcode = "0110011" and funct3 = "001"     else                          -- SLL
                    "01001" when opcode = "0110011" and funct3 = "101"     else                          -- SRL 
-                   "00000" when opcode = "0000011"                        else                           -- LW
-                   "00000" when opcode = "0100011"                        else                       -- SW
-	           "00100" when opcode = "1100011" and funct3 = "000"     else                       -- BEQ
-                   "00100" when opcode = "1100011" and funct3 = "001"     else                      -- BNE
-                   "00000" when opcode = "0110111"                        else                       -- LUI
-                   "00010" when opcode = "0010011" and funct3 = "111"     else                    -- ANDI
-	           "00011" when opcode = "0010011" and funct3 = "110"     else                       -- ORI
-	           "00001" when opcode = "0010011" and funct3 = "001"     else                      -- SLLI
-	           "01001" when opcode = "0010011" and funct3 = "101";                                -- SRLI
+                   "00000" when opcode = "0000011"                        else                          -- LW
+                   "00000" when opcode = "0100011"                        else                          -- SW
+	           "00100" when opcode = "1100011" and funct3 = "000"     else                          -- BEQ
+                   "00100" when opcode = "1100011" and funct3 = "001"     else                          -- BNE
+                   "00000" when opcode = "0110111"                        else                          -- LUI
+                   "00010" when opcode = "0010011" and funct3 = "111"     else                          -- ANDI
+	           "00011" when opcode = "0010011" and funct3 = "110"     else                          -- ORI
+	           "00001" when opcode = "0010011" and funct3 = "001"     else                          -- SLLI
+	           "01001" when opcode = "0010011" and funct3 = "101";                                  -- SRLI
 
 	----------------------------------------
 	--         BRANCH LOGIC OUTPUT        --
@@ -90,13 +90,16 @@ begin
 	--        MEMREAD OUTPUT            --
  	--------------------------------------
 	
-	MemRead <= '1' when opcode = "0000011" and funct3 = "101" else 
+	--MemRead <= '1' when opcode = "0000011" and funct3 = "101" else
+	--MemRead <= '0'; 
+	MemRead <= '1' when opcode = "0000011" else
 	           '0';
 
 	--------------------------------------
 	--        MEMTOREG OUTPUT           --
 	--------------------------------------
-	MemToReg <= '1' when opcode = "0000011" and funct3 = "101" else
+	--MemToReg <= '1' when opcode = "0000011" and funct3 = "101" else
+	MemToReg <= '1' when opcode = "0000011" else
 		    '0';
 
 	-------------------------------------
@@ -114,7 +117,8 @@ begin
 	------------------------------------
 	--        REGWRITE OUTPUT         --
 	------------------------------------
-	RegWrite <='0' when opcode="0100011" AND funct3="010" else	  	
+	RegWrite <='1' when opcode="0000011" else
+		   '0' when opcode="0100011" AND funct3="010" else	  	
 		   '0' when opcode="1100011" AND funct3="000" else	   
 		   '0' when opcode="1100011" AND funct3="001" else	    
 		   (not clk);

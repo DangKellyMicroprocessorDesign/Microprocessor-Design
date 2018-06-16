@@ -62,15 +62,15 @@ begin
 			i_ram (to_integer(unsigned(Address))) <= DataIn;
 		END IF;
 	END IF;
-
     END IF;
     
     
-    IF (OE='0' AND (to_integer(unsigned(Address)) <=127)) THEN
+   IF (OE='0' AND (to_integer(unsigned(Address)) <=127)) THEN
+--    --IF (OE='1' AND (to_integer(unsigned(Address)) <=127)) THEN
 	DataOut <=  i_ram (to_integer(unsigned(Address)));
-    ELSE
+   ELSE
 	Dataout <= highz;
-    END IF;
+   END IF;
 
 
   end process RamProc;
