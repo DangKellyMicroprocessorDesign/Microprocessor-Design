@@ -117,8 +117,8 @@ begin
 	------------------------------------
 	--        REGWRITE OUTPUT         --
 	------------------------------------
-	RegWrite <='1' when opcode="0000011" else
-		   '0' when opcode="0100011" AND funct3="010" else	  	
+	--RegWrite <='1' when opcode="0000011" and clk='1' else
+	RegWrite <='0' when opcode="0100011" AND funct3="010" else	  	
 		   '0' when opcode="1100011" AND funct3="000" else	   
 		   '0' when opcode="1100011" AND funct3="001" else	    
 		   (not clk);
